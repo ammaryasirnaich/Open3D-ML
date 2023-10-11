@@ -67,6 +67,9 @@ def main(args):
 
     # classname = getattr(datasets, args.dataset_type)
     # dataset = classname(args.dataset_path)
+    cfg_file = "/workspace/Open3D/build/Open3D-ML/ml3d/configs/pointpillars_kitti.yml"
+    cfg = _ml3d.utils.Config.load_from_file(cfg_file)
+    
     cfg.dataset['dataset_path'] = args.dataset_path
     dataset = ml3d.datasets.KITTI(cfg.dataset.pop('dataset_path', None), **cfg.dataset)
 
@@ -74,8 +77,6 @@ def main(args):
                                              framework)
     PointPillars = _ml3d.utils.get_module("model", "PointPillars", framework)
     
-    cfg_file = "ml3d/configs/pointpillars_kitti.yml"
-    cfg = _ml3d.utils.Config.load_from_file(cfg_file)
 
     model = ml3d.models.PointPillars(**cfg.model)
 
