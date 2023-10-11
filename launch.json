@@ -1,0 +1,23 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "project_working/demo_kitti_visualization_pointpiller.py",
+            "args": ["torch","--dataset_type","KITTI","--dataset_path","/workspace/data/kitti_detection/kitti","--path_ckpt_pointpillars","/workspace/Open3D/build/Open3D-ML/logs/pointpillars_kitti_202012221652utc.pth",],
+            "console": "integratedTerminal",
+            "justMyCode": true
+
+            
+        }
+    ]
+}
+
+
+// "args": ["ml3d/configs/pointpillars_kitti.yml","framework","torch","/workspace/data/kitti_detection/kitti","--pipeline","ObjectDetection"],
+

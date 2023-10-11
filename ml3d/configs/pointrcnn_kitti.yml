@@ -1,11 +1,11 @@
 dataset:
   name: KITTI
-  dataset_path: # path/to/your/dataset
+  dataset_path: /workspace/data/kitti_detection/kitti
   cache_dir: ./logs/cache
 
 model:
   name: PointRCNN
-  ckpt_path: # path/to/your/checkpoint
+  ckpt_path: /workspace/Open3D/build/Open3D-ML/logs/pointpillars_kitti_202012221652utc.pth
   batcher: "ignore" # for TF, does use the batcher of the model class
 
   point_cloud_range: [0, -40, -1, 70.4, 40, 3]
